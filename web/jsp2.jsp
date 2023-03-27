@@ -1,7 +1,7 @@
 <%-- 
     Document   : jsp2
     Created on : 14 mar 2023, 13:12:32
-    Author     : alumno
+    Autdor     : alumno
 --%>
 
 <%@page import="java.util.List"%>
@@ -11,11 +11,17 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <div class="p-3 mb-1 bg-light">
         <title>JSP Page</title>
     </head>
-    <body>
-        <h1>mi jsp2!</h1>
+    <body style="background-color: #F7FFF7">
+        <h1>
+            Tabla de Calificaciones <br>         
+            <small class="text-muted">Selecciona añadir para agregar otro estudiante</small>
+        </h1><br><br>
         <%
             int i = 0;
             List<Datos> lista = null;
@@ -37,10 +43,14 @@
                 lista.remove( Integer.parseInt(id) );
             }
         %>
-        <a href="jsp1.jsp">Regresar a jsp1 v1</a>
-        <a href="jsp3.jsp">ir a jsp3</a>
-        <table border="1">
-            <tr>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-success"><a href="jsp1.jsp" class="link-light">Regresar a jsp1 v1</a></button>
+            <button type="button" class="btn btn-secondary"><a href="jsp3.jsp" class="link-light">ir a jsp3</a></button>
+        </div><br><br>
+        
+        
+        <table class="table table-striped table-hover">
+            <tr>           
                 <td>#</td>
                 <td>Id</td>
                 <td>Nombre</td>
@@ -67,6 +77,8 @@
                 }
               }
             %>
+           
         </table>
+            </div>
     </body>
 </html>
