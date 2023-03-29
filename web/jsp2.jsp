@@ -44,8 +44,9 @@
             }
         %>
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-success"><a href="jsp1.jsp" class="link-light">Regresar a jsp1 v1</a></button>
+            <button type="button" class="btn btn-success"><a href="jsp1.jsp" class="link-light">Regresar a jsp1</a></button>
             <button type="button" class="btn btn-secondary"><a href="jsp3.jsp" class="link-light">ir a jsp3</a></button>
+            <button type="button" class="btn btn-primary"><a href="index.html" class="link-light">Pagina Principal</a></button>
         </div><br><br>
         
         
@@ -69,8 +70,11 @@
                 <td><%=datos.getNombre( )%></td>
                 <td><%=datos.getCalf()%></td>
                 <td>
-                    <a href="jsp2.jsp?id=<%=i%>&borrar=Submit">Borrar</a> 
-                    <a href="jsp3.jsp?id=<%=i++%>&editar=Submit">Editar</a> 
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-danger"><a href="jsp2.jsp?id=<%=i%>&borrar=Submit" class="link-light">Borrar</a> </button>
+                        <button type="button" class="btn btn-info"><a href="jsp3.jsp?id=<%=i++%>&editar=Submit" class="link-dark">Editar</a> </button>
+                    </div>
+
                 </td>
             </tr>
             <%

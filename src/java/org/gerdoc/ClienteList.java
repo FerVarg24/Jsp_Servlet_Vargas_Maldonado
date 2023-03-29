@@ -80,7 +80,9 @@ public class ClienteList extends HttpServlet
                     out.println( String.format( "<td>%s</td>" , cliente.getApellidoP() ) );
                     out.println( String.format( "<td>%s</td>" , cliente.getApellidoM() ) );
                     out.println( String.format( "<td>%d</td>" , cliente.getEdad() ) );
-                    out.println( String.format( "<td>%s</td>" , "<a href=\"ClienteList?id=" + j +"&borrar=Submit\">Borrar</a> " ) );
+                    out.println( String.format( "<td>%s" , "<a href=\"ClienteList?id=" + j +"&borrar=Submit\">Borrar</a> " ) );
+                    out.println( String.format( "%s" , "<a href =\"CambiaCliente?id=" + j +"\">Cambiar</a> </td>" ) );
+                    
                     out.println("</tr>");
                     j++;
                 }

@@ -37,10 +37,8 @@
         
         <%
             int suma = 0, rest = 0, multi = 0, may = 0, men =0,prim = 0;
-            float prom = 0;
-            
-            String num =request.getParameter("num");
-            num = null;
+            float prom = 0;   
+            String num = request.getParameter("num");
             int cuan = Integer.parseInt(num);
             for (int i = 0; i < Integer.parseInt(num); i++) {
                     
