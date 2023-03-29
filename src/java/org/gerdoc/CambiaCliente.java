@@ -173,7 +173,21 @@ public class CambiaCliente extends HttpServlet {
     }
     
     private void cambiarCliente(HttpServletRequest request){
-        
+    HttpSession session = request.getSession();
+    List<Cliente> clientes = (List<Cliente>) session.getAttribute("clientes");
+
+    int idx = Integer.parseInt(request.getParameter("id"));
+
+    Cliente clienteActual = clientes.get(idx);
+
+    String nombre = request.getParameter("nombre");
+    String apellidoP = request.getParameter("apellidoP");
+    String apellidoM = request.getParameter("apellidoM");
+    int edad = Integer.parseInt(request.getParameter("edad"));
+    clienteActual.setNombre(nombre);
+    clienteActual.setApellidoP(apellidoP);
+    clienteActual.setApellidoM(apellidoM);
+    clienteActual.setEdad(edad);
     }
     
     
